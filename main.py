@@ -5,10 +5,8 @@ import deepl
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 AUTH_KEY = os.getenv("DEEPL_AUTHKEY")
-channel1 = os.getenv("MAIN_CHANNEL")
-channel2 = os.getenv("TRANSLATEDCHANNEL")
-channel1 = int(channel1)
-channel2 = int(channel2)
+channel1 = int(os.getenv("MAIN_CHANNEL"))
+channel2 = int(os.getenv("TRANSLATEDCHANNEL"))
 print(channel1 + channel2)
 translator = deepl.Translator(AUTH_KEY)
 
